@@ -1,0 +1,27 @@
+<h2>Create an Event</h2>
+ 
+<form action="/events/create" method="post">
+  <label> Title:
+    <input type="text" name="title" />
+  </label>
+
+ 
+  <label> Description:
+    <textarea name="description" cols="30" rows="4"> </textarea>
+  </label>
+
+    <label> Location:
+    <input type="text" name="location" />
+  </label>
+ 
+  <label> Contact:
+    <input type="number" name="contact" min="1" max="20" />
+  </label>
+
+  <label>
+    Picture: 
+   <input type="file" name="picture_url">
+</label>
+ 
+  <button type="submit"> Create </button>
+</form>
