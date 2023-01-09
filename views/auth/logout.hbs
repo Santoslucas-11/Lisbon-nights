@@ -1,4 +1,12 @@
-{{!-- this file is only shown whenever there is an error during log out --}}
+ <div id="logout-form">
+  <h2>Log Out</h2>
+<form action="/auth/logout" method="POST">
+ 
+ <button type="submit">Log Out</button>
+ 
 {{#if errorMessage}}
     {{errorMessage}}
 {{/if}}
+
+</form>
+</div>

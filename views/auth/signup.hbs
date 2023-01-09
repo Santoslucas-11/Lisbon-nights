@@ -1,23 +1,47 @@
-<div id="form">
-  <h2>Signup</h2>
-  <form action="/signup" method="POST">
-
+ <div class="formcontainer">
+                  <div class="myform form">
+                        <div class="logo mb-3">
+                           <div class="col-md-12 text-center">
+                              <h1>Lisbon Nights SignUp</h1>
+                           </div>
+                        </div>
+  <form action="/auth/signup" method="POST">
+ <div class="form-group">
     <label> Username
       <input type="text" name="username" placeholder="ironhacker" />
     </label>
-
+    </div>
+<div class="form-group">
     <label> Email
       <input type="email" name="email" placeholder="rockstar@ironhack.com" />
     </label>
-
+    </div>
+<div class="form-group">
     <label> Password
       <input type="password" name="password" placeholder="********" />
     </label>
+    </div>
 
-    <button type="submit">Create account</button>
+    <div class="form-group" id="typeofuser">
+   <label for="user-select">Type of user:</label>
+   <select id="selector" name="accountType" id="user-select">
+  <option value="Creator">Event Creator</option>
+  <option value="Client">Client</option>
+ </select>
+ </div>
+ 
+ <div class="col-md-12 text-center mb-3">
+                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Start</button>
+                           </div>
 
       {{#if errorMessage}}
     <p class="error">{{errorMessage}}</p>
   {{/if}}
+  <div class="col-md-12 ">
+                              <div class="form-group">
+                                 <p class="text-center"><a href="/auth/login" id="signin" style="color: black"><b>Already have an account?</b></a></p>
+                              </div>
+                           </div>
+                            </div>
   </form>
 </div>

@@ -1,18 +1,47 @@
 
- 
-<h1>EVENTS</h1>
- 
 
- 
+<h1 id="gallery-title">Events Gallery</h1>
+<hr>
+
+<div class="gallery">
 {{#each events}}
-  <div>
-    <h3>{{title}}</h3>
-    <a href="/events/{{_id}}">See details</a> 
-    <a href="/events/{{_id}}/edit">Edit</a>
-  </div>
 
-   <form action="/events/{{_id}}/delete" method="POST">
-      <button>Delete</button>
-    </form>
+   <div class="card">
+      <div class="card-image">
+      <img src='{{picture_url}}' alt='{{title}}' width="600" height="400"/>
+      </div>
+    
+      <div class="event-description">
+        
+        <p>Description:</p>
+        <i>{{description}}</i>
+        <br>
 
+        <div class="event-location">
+        
+        <p>Location:</p>
+        <i>{{location}}</i>
+        <br>
+
+        <div class="event-contact">
+        
+        <p>Contact:</p>
+        <i>{{contact}}</i>
+        <br>
+
+        <div class="event-file">
+      
+    
+
+       
+         <form action="/events/{{_id}}/delete" method="post">
+         <button class='btn btn-primary' type="submit">Delete</button>
+         </form>
+          <a href='/events/{{_id}}/edit' class='btn btn-primary'>Edit</a>
+        
+    </div>
+    </div>
+    
 {{/each}}
+
+</div>

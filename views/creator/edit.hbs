@@ -1,0 +1,18 @@
+<div class="edit-creator" id="creator-title">
+  <h1>Edit your Profile</h1>
+</div>
+<hr>
+<div>
+<form action="/auth/edit/{{editCreator._id}}" method="POST" enctype='multipart/form-data'>
+<div class="formbases">
+  <div class="artist-container">
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstName" name="firstname" placeholder="Your name..">
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastName" name="lastname" placeholder="Your last name..">
+    <label for="lname">Short Bio</label>
+    <input type="text" id="bio" name="bio" placeholder="About you..">
+    <input type="submit" value="Save Changes">
+  </form>
+</div>
+</div>

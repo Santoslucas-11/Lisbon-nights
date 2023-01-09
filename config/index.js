@@ -26,8 +26,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 
 // Connects the mongo uri to maintain the same naming structure
-const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/lisbon-nights-app";
+
 
 // Middleware configuration
 module.exports = (app) => {
@@ -49,17 +48,5 @@ module.exports = (app) => {
   // Handles access to the favicon
   app.use(
     favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
-  );
-
-  // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
-  app.use(
-    session({
-      secret: process.env.SESSION_SECRET || "super hyper secret key",
-      resave: false,
-      saveUninitialized: false,
-      store: MongoStore.create({
-        mongoUrl: MONGO_URI,
-      }),
-    })
   );
 };

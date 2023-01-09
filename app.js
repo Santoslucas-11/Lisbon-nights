@@ -20,7 +20,7 @@ require('./config')(app);
 require('./config/session.config')(app);
 
 const capitalize = require("./utils/capitalize");
-const projectName = "lisbon-nights-app";
+const projectName = "lisbon-nights";
 
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
@@ -32,7 +32,7 @@ const eventRoutes = require('./routes/event.routes');
 app.use('/', eventRoutes); 
 
 const authRoutes = require("./routes/auth.routes");
-app.use("/", authRoutes);
+app.use("/auth", authRoutes);
 
 
 

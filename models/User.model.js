@@ -19,8 +19,15 @@ const userSchema = new Schema(
     passwordHash: {
       type: String,
       required: [true, 'Password is required.']
-    }
+    },
+
+    accountType: {
+      type: String,
+      required: true,
+      enum: ["Creator", "Client"]
+      },
   },
+
   {
     timestamps: true
   }

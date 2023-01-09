@@ -1,14 +1,20 @@
 <h2>Edit Event: {{event.title}}</h2>
  
-<form action="/events/{{event._id}}/edit" method="post">
+<form action="/events/{{event._id}}/edit" method="post" enctype="multipart/form-data">
+  
+  <div class="formbases">
+  <div class="event-container">
+  <h2>Edit Event: {{event.title}}</h2>
+  
   <label> Title:
     <input type="text" name="title" value="{{event.title}}" />
   </label>
 
 
-   <label> Description:
-    <textarea name="description" cols="30" rows="4">{{event.description}}</textarea>
-  </label>
+  <div id="description">
+  <label for="">Description:</label>
+  <input type="text" name="description"/>
+  </div>
  
  
     <label> Location:
@@ -17,13 +23,16 @@
  
  
    <label> Contact:
-    <input type="number" name="contact" min="1" max="10" value="{{event.contact}}"/>
+    <input type="number" name="contact"  value="{{event.contact}}"/>
   </label>
 
    <label>
     Picture: 
-   <input type="file" name="picture_url" value="{{event.picture_url}}>
+   <input type="file" name="picture_url" class="form-control-file">
+<input type="text" name="existingImage" hidden value="{{picture_url}}">
 </label>
  
-  <button>Save changes</button>
+  <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm"> Save Changes </button>
+  </div>
+  </div>
 </form>

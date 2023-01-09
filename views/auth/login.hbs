@@ -1,20 +1,37 @@
-<div id="form">
-  <h2>Login</h2>
- 
-  <form action="/login" method="POST">
+<div class="formcontainer">
+				<div class="myform form ">
+					 <div class="logo mb-3">
+						 <div class="col-md-12 text-center">
+							<h1>Lisbon Nights Login</h1>
+						  </div>
+					    </div>
+  <form action="/auth/login" method="POST">
+  <div class="form-group">
  
     <label> Email
       <input type="email" name="email" placeholder="rockstar@ironhack.com" />
     </label>
- 
+    </div>
+  <div class="form-group">
     <label>Password
       <input type="password" name="password" placeholder="********" />
     </label>
- 
-    <button type="submit">Login</button>
+    </div>
+  <div class="col-md-12 text-center ">
+   <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+                           </div>
  
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
+    <div class="col-md-12 ">
+                              <div class="login-or">
+                                 <hr class="hr-or">
+                                 <span class="span-or">or</span>
+                              </div>
+                           </div>
+                        <div class="form-group">
+                    <p class="text-center">Don't have account? <a href="/auth/signup" id="signup" style="color:black"><b>Sign up here</b></a></p>
+                </div>
   </form>
 </div>
