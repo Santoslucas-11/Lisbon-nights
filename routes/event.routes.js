@@ -57,7 +57,7 @@ router.post('/events/create', isCreator,async (req, res, next) => {
   .catch(error => next(error));
 });
 
-router.get('/events', isCreator, async (req, res, next) => {
+router.get('/events', async (req, res, next) => {
  await Event.find()
     .then(events => {
       
