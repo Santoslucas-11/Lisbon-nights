@@ -319,6 +319,7 @@ label {
         .flex-direction{
         flex-direction:column;
         }
+      }
       
       div.card-image img {
         width: 100%;

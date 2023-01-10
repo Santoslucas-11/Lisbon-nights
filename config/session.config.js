@@ -1,7 +1,7 @@
 const session = require('express-session');
 const MongoStore = require("connect-mongo");
 const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/lisbon-nights-app";
+  process.env.MONGODB_URI || "mongodb://localhost:27017/lisbon-nights-app";
 
 
 module.exports = app => {
